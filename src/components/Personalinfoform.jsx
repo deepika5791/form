@@ -22,7 +22,7 @@ const Personalinfoform = () => {
     setLoading(true);
     setMessage("");
     try {
-      const response = await fetch("https://userform-u7ka.onrender.com", {
+      const response = await fetch("https://userform-u7ka.onrender.com/form", {
         method: "POST",
         headers: { "Content-type": "application/json" },
         body: JSON.stringify(form),
