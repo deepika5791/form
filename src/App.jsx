@@ -1,6 +1,7 @@
 import React from "react";
-import Personalinfoform from "./components/personalinfoform";
+
 import "./App.css";
+import Personalinfoform from "./components/Personalinfoform";
 const App = () => {
   return (
     <div>
