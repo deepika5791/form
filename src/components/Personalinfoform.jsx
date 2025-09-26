@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Personalinfoform.css";
-const personalinfoform = () => {
+const Personalinfoform = () => {
   const [form, setInfo] = useState({ name: "", password: "", email: "" });
 
   const ChangeHandler = (e) => {
@@ -66,4 +66,4 @@ const personalinfoform = () => {
   );
 };
 
-export default personalinfoform;
+export default Personalinfoform;
