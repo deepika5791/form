@@ -14,7 +14,6 @@ const personalinfoform = () => {
     e.preventDefault();
     console.log(form);
     try {
-    
       const response = await fetch("https://userform-u7ka.onrender.com", {
         method: "POST",
         headers: { "Content-type": "application/json" },
