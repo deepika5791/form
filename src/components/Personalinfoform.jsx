@@ -14,11 +14,14 @@ const personalinfoform = () => {
     e.preventDefault();
     console.log(form);
     try {
-      await fetch("https://userform-qu82.onrender.com/form", {
+    
+      const response = await fetch("https://userform-u7ka.onrender.com", {
         method: "POST",
         headers: { "Content-type": "application/json" },
         body: JSON.stringify(form),
       });
+      const data = await response.text();
+      console.log("Response from Backend", data);
       setInfo({ name: "", password: "", email: "" });
     } catch (error) {
       console.log(error);
