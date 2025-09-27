@@ -29,8 +29,8 @@ const Personalinfoform = () => {
       });
       const data = await response.json();
       console.log("Response from Backend", data);
+      setMessage(data.message);
       setInfo({ name: "", password: "", email: "" });
-      setMessage("Form submitted successfully");
     } catch (error) {
       console.log(error);
       setMessage("Error submitting form");
