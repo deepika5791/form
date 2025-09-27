@@ -15,7 +15,7 @@ const Personalinfoform = () => {
   const handlersubmit = async (e) => {
     e.preventDefault();
     console.log(form);
-    if (form.password < 6) {
+    if (form.password.length < 6) {
       setMessage("Password should be atleast 6 characters");
       return;
     }
@@ -27,7 +27,7 @@ const Personalinfoform = () => {
         headers: { "Content-type": "application/json" },
         body: JSON.stringify(form),
       });
-      const data = await response.text();
+      const data = await response.json();
       console.log("Response from Backend", data);
       setInfo({ name: "", password: "", email: "" });
     } catch (error) {
